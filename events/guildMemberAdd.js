@@ -1,9 +1,11 @@
 const { Events } = require('discord.js');
 
+const gm = require('../utils/guildMemberUtils.js');
+
 module.exports = {
 	name: Events.GuildMemberAdd,
 	once: false,
 	execute(member) {
-		console.log(`Member Joined: ${member.displayName}`);
+        gm.updateName(member);
 	},
 };
