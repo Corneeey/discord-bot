@@ -1,0 +1,12 @@
+# Ignore Node Modules
+node_modules
+
+# Ignore Environment File
+.env
+
+# Ignore ESLint File
+.eslintrc.json
+
+# !! IMPORTANT !!
+# Ignore Config File
+config.json
