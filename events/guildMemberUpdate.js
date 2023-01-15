@@ -6,6 +6,7 @@ module.exports = {
 	name: Events.GuildMemberUpdate,
 	once: false,
 	execute(oldMember, newMember) {
-		gm.updateName(newMember);
+		//gm.updateName(newMember);
+        gm.updateRole(newMember);
 	},
 };

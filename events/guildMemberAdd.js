@@ -7,5 +7,6 @@ module.exports = {
 	once: false,
 	execute(member) {
         gm.updateName(member);
+        gm.updateRole(member);
 	},
 };
