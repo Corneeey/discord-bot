@@ -8,7 +8,11 @@ module.exports = {
 		.setName('check-roles')
 		.setDescription(`Makes Sure All Users Have The Role ${roleName}`),
 	async execute(interaction) {
-        gm.updateGuildRoles(interaction.guild);
-        await interaction.reply(`Updated The Roles Of All Accessible Members`);
+        gm.updateGuildRoles(interaction.guild).then((updatedRoles) => {
+			if (updatedRoles === 0)
+				interaction.reply(`All Users Have The Role ${roleName}.`);
+			else
+				interaction.reply(`Gave ${updatedRoles} Users The Role ${roleName}.`);
+		});
 	},
 };
