@@ -6,6 +6,7 @@ module.exports = {
 	name: Events.GuildMemberUpdate,
 	once: false,
 	execute(oldMember, newMember) {
+		console.log(`[Event: GuildMemberUpdate] User (${oldMember.displayName}) Was Edited`);
 		onGuildMemberUpdate(newMember);
 	},
 };

@@ -6,6 +6,7 @@ module.exports = {
 	name: Events.GuildMemberAdd,
 	once: false,
 	execute(member) {
+		console.log("[Event: GuildMemberAdd] User Joined The Server");
         gm.updateName(member);
         gm.updateRole(member);
 	},
