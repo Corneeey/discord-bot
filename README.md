@@ -10,7 +10,7 @@ This bot has two features:
 ## Configuration
 The bot requires a `settings.json` file in the project root. The file should have the following values set:
 
-```json
+```jsonc
 {
     "clientId": "<BotClientId>",
     "token": "<BotToken>",
