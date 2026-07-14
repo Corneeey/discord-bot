@@ -12,4 +12,6 @@ RUN npm install
 COPY . /usr/src/bot
 
 # Start me!
+ENV DISCORD_TOKEN=""
+
 CMD ["node", "index.js"]

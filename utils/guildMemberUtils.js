@@ -1,4 +1,8 @@
-const { roleName, namePostfix } = require('../config.json');
+const path = require('node:path');
+const { getConfigValue } = require('./getToken');
+
+const roleName = getConfigValue('roleName', path.join(__dirname, '..', 'config.json'), ['DISCORD_ROLE_NAME']);
+const namePostfix = getConfigValue('namePostfix', path.join(__dirname, '..', 'config.json'), ['DISCORD_NAME_POSTFIX']);
 
 // Tries To Update Names Of All Members In A Guild.
 // Returns A Promise Resolving Into An Object With The

@@ -1,6 +1,8 @@
+const path = require('node:path');
 const { SlashCommandBuilder } = require('discord.js');
-const { roleName } = require('../config.json');
+const { getConfigValue } = require('../utils/getToken');
 
+const roleName = getConfigValue('roleName', path.join(__dirname, '..', 'config.json'), ['DISCORD_ROLE_NAME']);
 const gm = require('../utils/guildMemberUtils.js');
 
 module.exports = {
